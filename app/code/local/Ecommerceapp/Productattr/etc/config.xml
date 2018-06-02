@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Ecommerceapp_Productattr>
+      <version>0.1.0</version>
+    </Ecommerceapp_Productattr>
+  </modules>
+  <global>
+    <helpers>
+      <productattr>
+        <class>Ecommerceapp_Productattr_Helper</class>
+      </productattr>
+    </helpers>
+	<models>
+	  <productattr>
+		<class>Ecommerceapp_Productattr_Model</class>
+		<resourceModel>productattr_mysql4</resourceModel>
+	  </productattr>
+	</models>
+	<resources>
+	  <ecommerceapp_productattr_setup>
+		<setup>
+		  <module>Ecommerceapp_Productattr</module>
+		  <!-- <class>Mage_Customer_Model_Entity_Setup</class>
+		  <class>Mage_Catalog_Model_Resource_Setup</class>
+		  <class>Mage_Eav_Model_Entity_Setup</class> -->
+		  <class>Mage_Catalog_Model_Resource_Eav_Mysql4_Setup</class>
+		</setup>
+		<connection>
+		  <use>core_setup</use>
+		</connection>
+	  </ecommerceapp_productattr_setup>
+	  <ecommerceapp_productattr_write>
+		<connection>
+		  <use>core_write</use>
+		</connection>
+	  </ecommerceapp_productattr_write>
+	  <ecommerceapp_productattr_read>
+		<connection>
+		  <use>core_read</use>
+		</connection>
+	  </ecommerceapp_productattr_read>
+	</resources>
+  </global>
+</config>
